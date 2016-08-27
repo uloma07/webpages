@@ -1,0 +1,24 @@
+<html> 
+  <head>
+    <title>Upload New Syllabus</title> 
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  </head>
+
+  <body> 
+    <form action="https://syllabus-testbkt.s3.amazonaws.com/" method="post" enctype="multipart/form-data">
+      <input type="hidden" name="key" value="${filename}">
+      <input type="hidden" name="AWSAccessKeyId" value="AKIAIUI7OXXGCIDDGB7A"> 
+      <input type="hidden" name="acl" value="private"> 
+      <input type="hidden" name="success_action_redirect" value="https://uloma07.github.io/webpages/newsyllabus.html">
+      <input type="hidden" name="policy" value="eyJleHBpcmF0aW9uIjogIjIwMjAtMDEtMDFUMDA6MDA6MDBaIiwKICAiY29uZGl0aW9ucyI6IFsgCiAgICB7ImJ1Y2tldCI6ICJzeWxsYWJ1cy10ZXN0Ymt0In0sIAogICAgWyJzdGFydHMtd2l0aCIsICIka2V5IiwgIiJdLAogICAgeyJhY2wiOiAicHJpdmF0ZSJ9LAogICAgeyJzdWNjZXNzX2FjdGlvbl9yZWRpcmVjdCI6ICJodHRwczovL3Vsb21hMDcuZ2l0aHViLmlvL3dlYnBhZ2VzL3R1cmtoaXQuaHRtbCJ9LAogICAgWyJzdGFydHMtd2l0aCIsICIkQ29udGVudC1UeXBlIiwgImFwcGxpY2F0aW9uL3BkZiJdICAgIAogIF0KfQ==">
+      <input type="hidden" name="signature" value="K835iJfYhUvFqFQXM2Dwz/lT3xU=">
+      <input type="hidden" name="Content-Type" value="application/pdf">
+      <!-- Include any additional input fields here -->
+		
+      <h1>Upload New Syllabus</h1>
+      <input name="file" type="file"> 
+      <br> 
+      <input type="submit" value="Upload File"> 
+    </form> 
+  </body>
+</html>

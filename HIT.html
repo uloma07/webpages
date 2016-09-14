@@ -2,9 +2,290 @@
   <head>
     <title>New HIT</title> 
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+	<script src="main.js"></script>
   </head>
 
   <body> 
-    <h3>HIT details go here</h3> 
+    <h3>Kindly answer the following questions about the document shown</h3> 
+    <form id="mturk_form" method="post" action="{{turk_submit_url}}/externalSubmit">
+    <input type="hidden" name="user_id" id="user_id" />
+    <input type="hidden" name="assignmentId" value="{{assignmentId}}" />
+   <div>
+	<label for="q1">1. Is this class graded on a curve?</label><br>
+	<input type="radio" name="q1" value="Yes"><label for="Yes"> Yes</label><br>
+	<input type="radio" name="q1" value="No"><label for="No"> No</label><br>
+	<input type="radio" name="q1" value="Unclear"><label for="Unclear"> Unclear</label><br>
+	</div>
+ 
+   <div>
+    <label for="q2">2. Is there a final project in the class?</label><br>
+    <input type="radio" name="q2" value="Yes"><label for="Yes"> Yes</label><br>
+	<input type="radio" name="q2" value="No"><label for="No"> No</label><br>
+	<input type="radio" name="q2" value="Unclear"><label for="Unclear"> Unclear</label><br>
+	</div>
+
+	<div>
+		<label for="q3">3. How many assignments are there in the class?</label>  
+		<select name="q3" id="assignments">
+			<option value="0">0</option>
+			<option value="1">1</option>
+			<option value="2">2</option>
+			<option value="3">3</option>
+			<option value="4">4</option>
+			<option value="5">5</option>
+			<option value="6">6</option>
+			<option value="7">7</option>
+			<option value="8">8</option>
+			<option value="9">9</option> 
+			<option value="10">10</option>
+			<option value="10+">10+</option>
+		</select>
+	</div>
+	
+	<div>
+   <label for="q4">4. What are the assignment due dates?</label>
+	<ol type="i" name="q4" id="dueDates">
+	
+	</ol>    
+</div>
+
+	
+
+	<div>
+	   <label for="q5">5. Are the learning objectives clearly stated?</label><br>
+		<input type="radio" name="q5" value="Yes"><label for="Yes"> Yes</label><br>
+		<input type="radio" name="q5" value="No"><label for="No"> No</label><br>
+		<input type="radio" name="q5" value="Unclear"><label for="Unclear"> Unclear</label><br>
+	</div>
+
+	<div>
+	   <label for="q6">6.How many study hours per week are recommended?</label><br>
+		<input type="text" name="q6" placeholder="0" id="recommendedHrs">
+		<input type="checkbox" name="q6" value="Unclear" id="recommendedUnclr"><label for="Unclear"> Unclear</label><br>
+	</div>
+
+<div>
+    <label for="q7">7. How many instructors does the class have?</label>  
+  <select name="q7" >
+    <option value="1">1</option>
+    <option value="2">2</option>
+    <option value="3">3</option>
+    <option value="4">4</option>
+    <option value="5">5</option>
+    <option value="6">6</option>
+    <option value="7">7</option>
+    <option value="8">8</option>
+    <option value="9">9</option> 
+    <option value="10">10</option>
+    <option value="10+">10+</option>
+  </select>
+</div>
+
+<div>
+   <label for="q8">8. Is there a score for attendance/participation in the class?</label><br>
+    <input type="radio" name="q8" value="Yes"><label for="Yes"> Yes</label><br>
+ <input type="radio" name="q8" value="No"><label for="No"> No</label><br>
+ <input type="radio" name="q8" value="Unclear"><label for="Unclear"> Unclear</label><br>
+</div>
+
+<div>
+   <label for="q9">9. Are the reading materials clearly listed?</label><br>
+    <input type="radio" name="q9" value="Yes"><label for="Yes"> Yes</label><br>
+ <input type="radio" name="q9" value="No"><label for="No"> No</label><br>
+ <input type="radio" name="q9" value="Unclear"><label for="Unclear"> Unclear</label><br>
+</div>
+
+<div>
+	   <label for="q10">10. Does the class include a lab/practical component?</label><br>
+		<input type="radio" name="q10" value="Yes"><label for="Yes"> Yes</label><br>
+		<input type="radio" name="q10" value="No"><label for="No"> No</label><br>
+		<input type="radio" name="q10" value="Unclear"><label for="Unclear"> Unclear</label><br>
+	</div>
+
+<div>
+   <label for="q11">11. Are there any group projects or assignments? </label><br>
+    <input type="radio" name="q11" value="Yes"><label for="Yes"> Yes</label><br>
+ <input type="radio" name="q11" value="No"><label for="No"> No</label><br>
+ <input type="radio" name="q11" value="Unclear"><label for="Unclear"> Unclear</label><br>
+</div>
+
+
+<div>
+   <label for="q12">12. Do the course assignments involve any in-person presentations? </label><br>
+    <input type="radio" name="q12" value="Yes"><label for="Yes"> Yes</label><br>
+ <input type="radio" name="q12" value="No"><label for="No"> No</label><br>
+ <input type="radio" name="q12" value="Unclear"><label for="Unclear"> Unclear</label><br>
+</div>
+
+<div>
+   <label for="q13">13. Does the course have tutorials? </label><br>
+    <input type="radio" name="q13" value="Yes"><label for="Yes"> Yes</label><br>
+ <input type="radio" name="q13" value="No"><label for="No"> No</label><br>
+ <input type="radio" name="q13" value="Unclear"><label for="Unclear"> Unclear</label><br>
+</div>
+
+<div>
+   <label for="q14">14. Does the course contain contact information for instructors? </label><br>
+    <input type="radio" name="q14" value="Yes"><label for="Yes"> Yes</label><br>
+ <input type="radio" name="q14" value="No"><label for="No"> No</label><br>
+ <input type="radio" name="q14" value="Unclear"><label for="Unclear"> Unclear</label><br>
+</div>
+
+<div>
+   <label for="q15">15. Does the course have an assigned online discussion forum? </label><br>
+    <input type="radio" name="q15" value="Yes"><label for="Yes"> Yes</label><br>
+ <input type="radio" name="q15" value="No"><label for="No"> No</label><br>
+ <input type="radio" name="q15" value="Unclear"><label for="Unclear"> Unclear</label><br>
+</div>
+
+<div>
+   <label for="q16">16. Does the course require the use of any software package? </label><br>
+    <input type="radio" name="q16" value="Yes"><label for="Yes"> Yes</label><br>
+ <input type="radio" name="q16" value="No"><label for="No"> No</label><br>
+ <input type="radio" name="q16" value="Unclear"><label for="Unclear"> Unclear</label><br>
+</div>
+
+
+<div>
+   <label for="q17">17. Is there a clearly stated timeline/course schedule? </label><br>
+    <input type="radio" name="q17" value="Yes"><label for="Yes"> Yes</label><br>
+ <input type="radio" name="q17" value="No"><label for="No"> No</label><br>
+ <input type="radio" name="q17" value="Unclear"><label for="Unclear"> Unclear</label><br>
+</div>
+
+
+<div>
+   <label for="q19">19. Is there a clearly stated dishonesty or academic integrity policy on the document?
+ </label><br>
+    <input type="radio" name="q19" value="Yes"><label for="Yes"> Yes</label><br>
+ <input type="radio" name="q19" value="No"><label for="No"> No</label><br>
+ <input type="radio" name="q19" value="Unclear"><label for="Unclear"> Unclear</label><br>
+</div>
+
+
+<div>
+   <label for="q20">20.Are there course withdrawal dates detailed on the document? What is the withdrawal date? </label><br>
+    <input type="radio" name="q20" value="Yes"><label for="Yes"> Yes</label><br>
+ <input type="radio" name="q20" value="No"><label for="No"> No</label><br>
+ <input type="radio" name="q20" value="Unclear"><label for="Unclear"> Unclear</label><br>
+</div>
+
+
+<div>
+<label for="q21">21.What format does the exam take? </label><br>
+    <select name="q12">
+    <option value="MultipleChoice">Multiple choice</option>
+    <option value="OpenBook">Open book</option>
+    <option value="Oral">Oral</option>
+    <option value="Essay">Essay</option>
+    <option value="NoExam">No exam</option>
+    <option value="Unclear">Unclear</option>    
+  </select>
+</div>
+
+
+<div>
+   <label for="q22">22. Can extra credit be earned on this course? </label><br>
+    <input type="radio" name="q22" value="Yes"><label for="Yes"> Yes</label><br>
+ <input type="radio" name="q22" value="No"><label for="No"> No</label><br>
+ <input type="radio" name="q22" value="Unclear"><label for="Unclear"> Unclear</label><br>
+</div>
+
+<div>
+   <label for="q23">23. Does this course have any extra fees/costs? </label><br>
+    <input type="radio" name="q23" value="Yes"><label for="Yes"> Yes</label><br>
+ <input type="radio" name="q23" value="No"><label for="No"> No</label><br>
+ <input type="radio" name="q23" value="Unclear"><label for="Unclear"> Unclear</label><br>
+</div>
+
+<div>
+   <label for="q23">23. Does this course have any extra fees/costs? </label><br>
+    <input type="radio" name="q23" value="Yes"><label for="Yes"> Yes</label><br>
+ <input type="radio" name="q23" value="No"><label for="No"> No</label><br>
+ <input type="radio" name="q23" value="Unclear"><label for="Unclear"> Unclear</label><br>
+</div>
+
+<div>
+   <label for="q24">24. Is there a cartoon, comic, or other illustration in this syllabus?
+ </label><br>
+    <input type="radio" name="q24" value="Yes"><label for="Yes"> Yes</label><br>
+ <input type="radio" name="q24" value="No"><label for="No"> No</label><br>
+ <input type="radio" name="q24" value="Unclear"><label for="Unclear"> Unclear</label><br>
+</div>
+
+
+<div>
+   <label for="q25">25. Is there a policy for late assignments?
+ </label><br>
+    <input type="radio" name="q25" value="Yes"><label for="Yes"> Yes</label><br>
+ <input type="radio" name="q25" value="No"><label for="No"> No</label><br>
+ <input type="radio" name="q25" value="Unclear"><label for="Unclear"> Unclear</label><br>
+</div>
+
+<div>
+   <label for="q26">26. Is the date and time of each class listed?</label><br>
+    <input type="radio" name="q26" value="Yes"><label for="Yes"> Yes</label><br>
+ <input type="radio" name="q26" value="No"><label for="No"> No</label><br>
+ <input type="radio" name="q26" value="Unclear"><label for="Unclear"> Unclear</label><br>
+</div>
+
+<div>
+   <label for="q27">27. Is the location of the class listed?
+ </label><br>
+    <input type="radio" name="q27" value="Yes"><label for="Yes"> Yes</label><br>
+ <input type="radio" name="q27" value="No"><label for="No"> No</label><br>
+ <input type="radio" name="q27" value="Unclear"><label for="Unclear"> Unclear</label><br>
+</div>
+
+
+<div>
+   <label for="q28">28. If this document has multiple “titles” or “sections”? please list the titles one per line. </label><br>
+    <textarea name="q28" placeholder="e.g. Introduction to Linear Algebra" rows=8 cols=40></textarea><br>
+</div>
+
+
+<div>
+  <label for="q29">29. How is the final grade calculated for this course? 
+	</label><br>
+	<table id="ExamStuff"  border="0"> 
+		<thead>	
+		<tr><td>Exam Type</td><td>Exam Period</td> <td>Exam Style</td><td></td></tr>	
+		</thead>
+	</table>
+	<br>
+	
+    <select name="q29a" id="examType">
+    <option value="Assignment">Assignment</option>
+    <option value="Exam">Exam</option>
+    <option value="Other">Other</option> 
+  </select>
+  
+  <select name="q29b" id="examPeriod">
+    <option value="Midterm">Midterm</option>
+    <option value="Final">Final</option>      
+  </select>
+  
+  <select name="q29c" id="examStyle">
+    <option value="MultipleChoice">Multiple choice</option>
+    <option value="OpenBook">Open book</option>
+    <option value="Oral">Oral</option>
+    <option value="Essay">Essay</option>
+    <option value="NoExam">No exam</option>
+    <option value="Unclear">Unclear</option>    
+  </select>
+  
+  <input type="button" value="Add" id="addExamStuff">
+  
+  <br>
+  
+  <input type="checkbox" name="q29d" value="Complex" id="complex"><label for="Complex">Grading Scheme is too complex to list here</label><br>
+  
+</div>
+
+
+    <br /><br />
+    <button class="btn btn-success" type="submit" value="Submit">Submit</button>
+</form>
   </body>
 </html>

@@ -68,6 +68,7 @@
 <div>
     <label for="q7">7. How many instructors does the class have?</label>  
   <select name="q7" >
+  <option value="0">0</option>
     <option value="1">1</option>
     <option value="2">2</option>
     <option value="3">3</option>
@@ -154,6 +155,13 @@
  <input type="radio" name="q17" value="Unclear"><label for="Unclear"> Unclear</label><br>
 </div>
 
+<div>
+   <label for="q18">18. Is the location of the class listed?
+ </label><br>
+    <input type="radio" name="q18" value="Yes"><label for="Yes"> Yes</label><br>
+ <input type="radio" name="q18" value="No"><label for="No"> No</label><br>
+ <input type="radio" name="q18" value="Unclear"><label for="Unclear"> Unclear</label><br>
+</div>
 
 <div>
    <label for="q19">19. Is there a clearly stated dishonesty or academic integrity policy on the document?
@@ -165,7 +173,7 @@
 
 
 <div>
-   <label for="q20">20.Are there course withdrawal dates detailed on the document? What is the withdrawal date? </label><br>
+   <label for="q20">20.Are there course withdrawal dates detailed on the document?</label><br>
     <input type="radio" name="q20" value="Yes"><label for="Yes"> Yes</label><br>
  <input type="radio" name="q20" value="No"><label for="No"> No</label><br>
  <input type="radio" name="q20" value="Unclear"><label for="Unclear"> Unclear</label><br>
@@ -231,22 +239,13 @@
 </div>
 
 <div>
-   <label for="q27">27. Is the location of the class listed?
- </label><br>
-    <input type="radio" name="q27" value="Yes"><label for="Yes"> Yes</label><br>
- <input type="radio" name="q27" value="No"><label for="No"> No</label><br>
- <input type="radio" name="q27" value="Unclear"><label for="Unclear"> Unclear</label><br>
+   <label for="q27">27. If this document has multiple “titles” or “sections”? please list the titles one per line. </label><br>
+    <textarea name="q27" placeholder="e.g. Introduction to Linear Algebra" rows=8 cols=40></textarea><br>
 </div>
 
 
 <div>
-   <label for="q28">28. If this document has multiple “titles” or “sections”? please list the titles one per line. </label><br>
-    <textarea name="q28" placeholder="e.g. Introduction to Linear Algebra" rows=8 cols=40></textarea><br>
-</div>
-
-
-<div>
-  <label for="q29">29. How is the final grade calculated for this course? 
+  <label for="q28">28. How is the final grade calculated for this course? 
 	</label><br>
 	<table id="ExamStuff"  border="0"> 
 		<thead>	
@@ -255,18 +254,18 @@
 	</table>
 	<br>
 	
-    <select name="q29a" id="examType">
+    <select name="q28a" id="examType">
     <option value="Assignment">Assignment</option>
     <option value="Exam">Exam</option>
     <option value="Other">Other</option> 
   </select>
   
-  <select name="q29b" id="examPeriod">
+  <select name="q28b" id="examPeriod">
     <option value="Midterm">Midterm</option>
     <option value="Final">Final</option>      
   </select>
   
-  <select name="q29c" id="examStyle">
+  <select name="q28c" id="examStyle">
     <option value="MultipleChoice">Multiple choice</option>
     <option value="OpenBook">Open book</option>
     <option value="Oral">Oral</option>
@@ -279,7 +278,7 @@
   
   <br>
   
-  <input type="checkbox" name="q29d" value="Complex" id="complex"><label for="Complex">Grading Scheme is too complex to list here</label><br>
+  <input type="checkbox" name="q28d" value="Complex" id="complex"><label for="Complex">Grading Scheme is too complex to list here</label><br>
   
 </div>
 

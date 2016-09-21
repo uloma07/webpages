@@ -50,7 +50,7 @@ $( document ).ready(function() {
 		//var examperiod = $('#examPeriod').find('option:selected').text();
 		var examstyle = $('#examStyle').find('option:selected').text();
 		
-		var row = '<tr><td>'+examtype+'</td><td>'+examstyle + '</td><td><input type="button" class="removerow" value="Remove"></td></tr>';
+		var row = '<tr><td>'+examtype+'</td><td>'+examstyle + '</td><td><input type="button" class="removerow" value="Remove">&nbsp&nbsp<input type="button" class="editrow" value="Edit"></td></tr>';
 		
 		$('#ExamStuff').append(row);
 	});

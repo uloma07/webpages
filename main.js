@@ -24,14 +24,14 @@ $( document ).ready(function() {
 			//disable textbox
 			$(".removerow").attr("disabled", "disabled");
 			$("#examType").attr("disabled", "disabled"); 
-			$("#examPeriod").attr("disabled", "disabled"); 
+			//$("#examPeriod").attr("disabled", "disabled"); 
 			$("#examStyle").attr("disabled", "disabled"); 
 			$("#addExamStuff").attr("disabled", "disabled"); 
 		}
 		else{
 			$(".removerow").removeAttr("disabled");  
 		$("#examType").removeAttr("disabled");  
-		$("#examPeriod").removeAttr("disabled");  
+		//$("#examPeriod").removeAttr("disabled");  
 		$("#examStyle").removeAttr("disabled");  
 		$("#addExamStuff").removeAttr("disabled");
 		}
@@ -42,10 +42,10 @@ $( document ).ready(function() {
 		var ListItem ='';
 		
 		var examtype = $('#examType').find('option:selected').text();
-		var examperiod = $('#examPeriod').find('option:selected').text();
+		//var examperiod = $('#examPeriod').find('option:selected').text();
 		var examstyle = $('#examStyle').find('option:selected').text();
 		
-		var row = '<tr><td>'+examtype+'</td><td>'+examperiod + '</td> <td>'+examstyle + '</td><td><input type="button" class="removerow" value="Remove"></td></tr>';
+		var row = '<tr><td>'+examtype+'</td><td>'+examstyle + '</td><td><input type="button" class="removerow" value="Remove"></td></tr>';
 		
 		$('#ExamStuff').append(row);
 	});

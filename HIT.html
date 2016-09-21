@@ -226,7 +226,7 @@
 </div>
 
 <div class="form-group">
-   <label for="q26">26. If this document has multiple "titles" or "sections"? please list the titles one per line. </label><br>
+   <label for="q26">26. If this document has multiple "titles" or "sections", please list the titles one per line. </label><br>
     <textarea name="q26" placeholder="e.g. Introduction to Linear Algebra" rows=8 cols=40></textarea><br>
 </div>
 
@@ -238,12 +238,9 @@
     <select name="q27a" id="examType">
     <option value="Assignment">Assignment</option>
     <option value="Exam">Exam</option>
+    <option value="Project">Project</option>
+   <option value="Lab">Lab</option>
     <option value="Other">Other</option> 
-  </select>
-  
-  <select name="q27b" id="examPeriod">
-    <option value="Midterm">Midterm</option>
-    <option value="Final">Final</option>      
   </select>
   
   <select name="q27c" id="examStyle">
@@ -253,7 +250,8 @@
     <option value="Essay">Essay</option>
     <option value="NoExam">No exam</option>
     <option value="Unclear">Unclear</option> 
-	</select>
+   
+</select>
     
   <button type="button" class="btn btn-default btn-sm" id="addExamStuff">
   <span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Add
@@ -262,7 +260,7 @@
   <br>
   
   <table id="ExamStuff"  border="0" data-role="table" class="table table-bordered">
-		<tr><th>Exam Type</th><th>Exam Period</th><th>Exam Style</th><th> </th></tr>	
+		<tr><th>Exam Type</th><th>Exam Style</th><th> </th></tr>	
 </table>
 	<br>
   

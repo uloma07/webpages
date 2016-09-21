@@ -13,7 +13,7 @@
 
   <body> 
     <h3>Kindly answer the following questions about the document shown</h3> 
-    <form id="mturk_form" method="post" action="{{turk_submit_url}}/externalSubmit" class="form-inline">
+    <form id="mturk_form" method="post" action="{{turk_submit_url}}/externalSubmit" >
 	<fieldset>
     <input type="hidden" name="user_id" id="user_id" />
     <input type="hidden" name="assignmentId" value="{{assignmentId}}" />
@@ -235,7 +235,7 @@
   <label for="q27">27. How is the final grade calculated for this course? 
 	</label><br>	
 	
-    <select name="q27a" id="examType" class="form-control">
+    <select name="q27a" id="examType" >
     <option value="Assignment">Assignment</option>
     <option value="Exam">Exam</option>
     <option value="Lab">Lab</option>
@@ -243,7 +243,7 @@
     <option value="Other">Other</option> 
   </select>
   
-  <select name="q27c" id="examStyle" class="form-control">
+  <select name="q27c" id="examStyle">
   	<option value="Essay">Essay</option>
     <option value="MultipleChoice">Multiple choice</option>
     <option value="OpenBook">Open book</option>

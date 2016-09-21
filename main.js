@@ -1,6 +1,11 @@
 $( document ).ready(function() {
 	
     // Your code here.
+    
+    $("#myBtn").click(function(){
+        $("#myModal").modal();
+    });
+    
 	$('#recommendedUnclr').click(function() {
 		if($('#recommendedUnclr').is(':checked')){
 			//disable textbox

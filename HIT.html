@@ -12,6 +12,7 @@
   </head>
 
   <body> 
+  <div class="container">
     <h3>Kindly answer the following questions about the document shown</h3> 
     <form id="mturk_form" method="post" action="{{turk_submit_url}}/externalSubmit" >
 	<fieldset>
@@ -242,7 +243,6 @@
     <option value="Project">Project</option>
     <option value="Other">Other</option> 
   </select>
-  <span class="col-xs-1" ></span>
   <select name="q27c" id="examStyle" class="col-xs-3">
   	<option value="Essay">Essay</option>
     <option value="MultipleChoice">Multiple choice</option>
@@ -272,5 +272,7 @@
     <button class="btn btn-success" type="submit" value="Submit">Submit</button
 	</fieldset>
 </form>
+
+</div>
   </body>
 </html>

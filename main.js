@@ -156,6 +156,17 @@ $( document ).ready(function() {
 				else
 					$("#dueDate").removeAttr("disabled");   
 			});
+			
+		$('#NoDateModal').click(function(){
+		//alert('here i amSS');
+				if($(this).is(':checked')){
+					//disable textbox
+					$("#editc").attr("disabled", "disabled");
+					
+				}
+				else
+					$("#editc").removeAttr("disabled");   
+			});
 	
 	$('#dueDates').on('click', '.dueDateUnclrbox', function(){
 		//alert('here i amSS');

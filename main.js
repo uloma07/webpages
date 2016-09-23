@@ -56,13 +56,14 @@ $( document ).ready(function() {
 		}
 		else{
 			examdate = $('#dueDate').text();
-			if(examdate='') alert('Please select the assessment date');
 		}
 		var examstyle = $('#examStyle').find('option:selected').text();
 		
 		var row = '<tr><td>'+examtype+'</td><td>'+examstyle + '</td><td>'+examdate + '</td><td><input type="button" class="removerow" value="Remove">&nbsp&nbsp<input type="button" class="editrow" value="Edit"></td></tr>';
-		
-		$('#ExamStuff').append(row);
+		if(examdate=='')
+			("#dueDate").addClass("error").attr('title', 'An error occurred!');
+		else
+			$('#ExamStuff').append(row);
 	});
 	
 		$('#examType').change(function() {

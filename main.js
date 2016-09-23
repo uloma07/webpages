@@ -63,7 +63,7 @@ $('#modal-sandbox-container input').datepicker({
 		}
 		var examstyle = $('#examStyle').find('option:selected').text();
 		
-		var row = '<tr><td>'+examtype+'</td><td>'+examstyle + '</td><td>'+examdate + '</td><td><input type="button" class="removerow" value="Remove">&nbsp&nbsp<input type="button" class="editrow" value="Edit"></td></tr>';
+		var row = '<tr><td>'+examtype+'</td><td>'+examstyle + '</td><td>'+examdate + '</td><td><input type="button" class="removerow" value="Remove">&nbsp&nbsp</td></tr>';
 		if(examdate==''){
 			$('#dueDate').addClass("error").attr('title', 'An error occurred!');
 			//alert('nothing in here')
@@ -133,7 +133,7 @@ $('#modal-sandbox-container input').datepicker({
 	        //alert(date);
 	});
 		
-	$('#assignments').change(function() {
+	$('#assignments1').change(function() {
 		
 		var numberOfAssignments = $('#assignments').find('option:selected').text();
 		

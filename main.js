@@ -2,6 +2,9 @@ $( document ).ready(function() {
 	
     // Your code here.
     
+    $('#sandbox-container input').datepicker({
+});
+    
     $("#myBtn").click(function(){
         $("#myModal").modal();
     });

@@ -55,6 +55,15 @@ $( document ).ready(function() {
 		$('#ExamStuff').append(row);
 	});
 	
+		$('#examType').change(function() {
+		
+		var examtype = $('#examType').find('option:selected').text();
+		if(examtype=="Assignment"){
+			$("#examStyle").val('Essay');
+		}
+	});
+	
+	
 	$("#ExamStuff").on('click','.removerow',function(){
         $(this).parent().parent().remove();
 	});

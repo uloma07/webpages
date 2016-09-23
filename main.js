@@ -64,8 +64,12 @@ $( document ).ready(function() {
 			$('#dueDate').addClass("error").attr('title', 'An error occurred!');
 			//alert('nothing in here')
 		}
-		else
+		else{
 			$('#ExamStuff').append(row);
+			$('#dueDate').removeClass("error");
+			$("#dueDate").removeAttr("title");
+			$('#dueDate').val('');
+		}
 	});
 	
 	$('#examType').change(function() {

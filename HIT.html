@@ -64,11 +64,13 @@
 	</div>
 	
 	<div class="form-group">
-   <label for="q4">4. What are the assignment due dates?</label>
-	<ol type="i" name="q4" id="dueDates">
-	
-	</ol>    
+   <label for="q4">4. Is there a cartoon, comic, or other illustration in this syllabus?
+ </label><br>
+    <input type="radio" name="q4" value="Yes"><label for="Yes"> Yes</label><br>
+ <input type="radio" name="q4" value="No"><label for="No"> No</label><br>
+ <input type="radio" name="q4" value="Unclear"><label for="Unclear"> I don't know</label><br>
 </div>
+
 	<div class="form-group">
 	   <label for="q5">5. Are the learning objectives clearly stated?</label><br>
 		<input type="radio" name="q5" value="Yes"><label for="Yes">&nbsp Yes</label><br>
@@ -222,30 +224,24 @@
  <input type="radio" name="q23" value="Unclear"><label for="Unclear">&nbsp I don't know</label><br>
 </div>
 
+
+
+
 <div class="form-group">
-   <label for="q24">24. Is there a cartoon, comic, or other illustration in this syllabus?
- </label><br>
-    <input type="radio" name="q24" value="Yes"><label for="Yes"> Yes</label><br>
- <input type="radio" name="q24" value="No"><label for="No"> No</label><br>
- <input type="radio" name="q24" value="Unclear"><label for="Unclear"> I don't know</label><br>
+   <label for="q24">24. Is the date and time of each class listed?</label><br>
+    <input type="radio" name="q24" value="Yes"><label for="Yes">&nbsp Yes</label><br>
+ <input type="radio" name="q24" value="No"><label for="No">&nbsp No</label><br>
+ <input type="radio" name="q24" value="Unclear"><label for="Unclear">&nbsp I don't know</label><br>
+</div>
+
+<div class="form-group">
+   <label for="q25">25. If this document has multiple "titles" or "sections", please list the titles one per line. </label><button type="button" class="btn btn-link" id="myBtn">See example</button><br>
+    <textarea name="q25" placeholder="e.g. Introduction to Linear Algebra" rows=8 cols=50 class="form-control"></textarea><br>
 </div>
 
 
 <div class="form-group">
-   <label for="q25">25. Is the date and time of each class listed?</label><br>
-    <input type="radio" name="q25" value="Yes"><label for="Yes">&nbsp Yes</label><br>
- <input type="radio" name="q25" value="No"><label for="No">&nbsp No</label><br>
- <input type="radio" name="q25" value="Unclear"><label for="Unclear">&nbsp I don't know</label><br>
-</div>
-
-<div class="form-group">
-   <label for="q26">26. If this document has multiple "titles" or "sections", please list the titles one per line. </label><button type="button" class="btn btn-link" id="myBtn">See example</button><br>
-    <textarea name="q26" placeholder="e.g. Introduction to Linear Algebra" rows=8 cols=50 class="form-control"></textarea><br>
-</div>
-
-
-<div class="form-group">
-	<label for="q27">27. How is the final grade calculated for this course? Populate the table below with assessment combinations</label><br>	
+	<label for="q26">26. How is the final grade calculated for this course? Populate the table below with assessment combinations</label><br>	
 	
 	<div class="panel panel-Primary">
 		<div class="panel-heading panel-title">
@@ -253,15 +249,15 @@
 			<div class="row">
 				<div class="col-md-3">
 					<label for="examType">Type</label>
-					<select name="q27a" id="examType" class="form-control" >
+					<select name="q26a" id="examType" class="form-control" >
 						<option value="Assignment">Assignment</option>
 						<option value="Exam">Exam</option>
 						<option value="Other">Other</option> 
 					</select>    
 				</div>
 				<div class="col-md-3">
-					<label for="dueDate">Delivery</label>
-					<select name="q27c" id="examStyle" class="form-control">
+					<label for="q26b">Delivery</label>
+					<select name="q26b" id="examStyle" class="form-control">
 					  <option value="Essay">Essay</option>
 						<option value="Multiple Choice">Multiple Choice</option>
 						<option value="Lab">Lab</option>

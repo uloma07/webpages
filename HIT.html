@@ -263,12 +263,12 @@
 					<label for="dueDate">Delivery</label>
 					<select name="q27c" id="examStyle" class="form-control">
 					  <option value="Essay">Essay</option>
-						<option value="MultipleChoice">Multiple choice</option>
+						<option value="Multiple Choice">Multiple Choice</option>
 						<option value="Lab">Lab</option>
-						<option value="OpenBook">Open book</option>
+						<option value="Open Book">Open Book</option>
 						<option value="Oral">Oral</option>
 						<option value="Project">Project</option>
-						<option value="NoExam">No exam</option>
+						<option value="No Exam">No Exam</option>
 						<option value="Unclear">Unclear</option>
 					</select>
 				</div>
@@ -322,6 +322,58 @@
           <p>The rediscovery of the Ancient Near East</p>
           <p>The Decipherment of the Ancient Scripts and Languages</p>
           </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="editModal" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Edit Assessment:</h4>
+        </div>
+        <div class="modal-body">
+        <div class="row">
+				<div class="col-md-3">
+					<label for="edita">Type</label>
+					<select name="edita" id="edita" class="form-control" >
+						<option value="Assignment">Assignment</option>
+						<option value="Exam">Exam</option>
+						<option value="Other">Other</option> 
+					</select>    
+				</div>
+				<div class="col-md-3">
+					<label for="editb">Delivery</label>
+					<select name="editb" id="editb" class="form-control">
+					  <option value="Essay">Essay</option>
+						<option value="Multiple Choice">Multiple Choice</option>
+						<option value="Lab">Lab</option>
+						<option value="Open Book">Open Book</option>
+						<option value="Oral">Oral</option>
+						<option value="Project">Project</option>
+						<option value="No Exam">No Exam</option>
+						<option value="Unclear">Unclear</option>
+					</select>
+				</div>
+				
+				<div class="form-group col-md-3">
+					<label for="editc">Date</label>
+				  <div id="sandbox-container"><input type="text" id="editc" class="form-control" placeholder="Click to select date"></div> &nbsp <input type="checkbox" name="NoDate" value="NoDate" id="NoDate"><label for="NoDate">&nbsp No date listed</label>
+				</div>
+				
+				<button type="button" class="btn btn-primary" id="save" style="float:right; padding: 5px">
+					<span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Add
+				</button>
+			</div>
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>

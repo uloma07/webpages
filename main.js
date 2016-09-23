@@ -56,6 +56,7 @@ $( document ).ready(function() {
 		}
 		else{
 			examdate = $('#dueDate').text();
+			if(examdate='') alert('Please select the assessment date');
 		}
 		var examstyle = $('#examStyle').find('option:selected').text();
 		

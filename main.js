@@ -69,6 +69,7 @@ $( document ).ready(function() {
 			$('#dueDate').removeClass("error");
 			$("#dueDate").removeAttr("title");
 			$('#dueDate').val('');
+			$('#NoDate').attr('checked', false); // Unchecks it
 		}
 	});
 	

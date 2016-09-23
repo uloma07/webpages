@@ -84,6 +84,14 @@ $( document ).ready(function() {
 	$("#ExamStuff").on('click','.removerow',function(){
         $(this).parent().parent().remove();
 	});
+	
+	$("#ExamStuff").on('click','.editrow',function(){
+        var therow = $(this).parent().parent();
+	        var type= therow.find("td").eq(0).html();
+	        var style= therow.find("td").eq(1).html();
+	        var date= therow.find("td").eq(2).html();
+	        alert(date);
+	});
 		
 	$('#assignments').change(function() {
 		

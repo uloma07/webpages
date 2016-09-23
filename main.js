@@ -5,6 +5,9 @@ $( document ).ready(function() {
     
     $('#sandbox-container input').datepicker({
 });
+
+$('#modal-sandbox-container input').datepicker({
+});
     
     $("#myBtn").click(function(){
         $("#myModal").modal();

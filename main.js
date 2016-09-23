@@ -61,7 +61,7 @@ $( document ).ready(function() {
 		
 		var row = '<tr><td>'+examtype+'</td><td>'+examstyle + '</td><td>'+examdate + '</td><td><input type="button" class="removerow" value="Remove">&nbsp&nbsp<input type="button" class="editrow" value="Edit"></td></tr>';
 		if(examdate==''){
-			("#dueDate").css({background: Yellow; border: 1px solid red;  });
+			$('#dueDate').css({background: Yellow; border: 1px solid red;  });
 			//alert('nothing in here')
 		}
 		else

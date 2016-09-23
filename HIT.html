@@ -244,18 +244,18 @@
 	<div class="panel panel-Primary">
 		<div class="panel-heading panel-title">
 			
-			<div class="form-inline">
-				<div class="form-group col-md-4">
+			<div class="row">
+				<div class="col-md-3">
 					<label for="examType">Type</label>
-					<select name="q27a" id="examType" >
+					<select name="q27a" id="examType" class="form-control" >
 						<option value="Assignment">Assignment</option>
 						<option value="Exam">Exam</option>
 						<option value="Other">Other</option> 
 					</select>    
 				</div>
-				<div class="form-group col-md-4">
+				<div class="col-md-3">
 					<label for="dueDate">Delivery</label>
-					<select name="q27c" id="examStyle" >
+					<select name="q27c" id="examStyle" class="form-control">
 					  <option value="Essay">Essay</option>
 						<option value="MultipleChoice">Multiple choice</option>
 						<option value="Lab">Lab</option>
@@ -266,13 +266,13 @@
 						<option value="Unclear">Unclear</option>
 					</select>
 				</div>
-				<br>
-				<div class="form-group col-md-8">
+				
+				<div class="form-group col-md-3">
 					<label for="dueDate">Date</label>
-				  <div class="span5 col-md-5" id="sandbox-container"><input type="text" class="form-control" placeholder="click to select date"></div> &nbsp <input type="checkbox" name="NoDate" value="NoDate" id="NoDate"><label for="NoDate">&nbsp No date listed</label>
+				  <div id="sandbox-container"><input type="text" class="form-control" placeholder="click to select date"></div> &nbsp <input type="checkbox" name="NoDate" value="NoDate" id="NoDate"><label for="NoDate">&nbsp No date listed</label>
 				</div>
-				<br>
-				<button type="button" class="btn btn-primary" id="addExamStuff">
+				
+				<button type="button" class="btn btn-primary" id="addExamStuff" style="float:right">
 					<span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Add
 				</button>
 			</div>

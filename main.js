@@ -84,6 +84,17 @@ $( document ).ready(function() {
 		$('#dueDates').append(list);
 	});
 	
+	$('#NoDate').click(function(){
+		//alert('here i amSS');
+				if($(this).is(':checked')){
+					//disable textbox
+					$("#dueDate").attr("disabled", "disabled");
+					
+				}
+				else
+					$("#dueDate").removeAttr("disabled");   
+			});
+	
 	$('#dueDates').on('click', '.dueDateUnclrbox', function(){
 		//alert('here i amSS');
 				if($(this).is(':checked')){

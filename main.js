@@ -90,7 +90,12 @@ $( document ).ready(function() {
 	        var type= therow.find("td").eq(0).html();
 	        var style= therow.find("td").eq(1).html();
 	        var date= therow.find("td").eq(2).html();
-	        alert(date);
+	        $("#editModal").find("#edita").val(type);
+	        $("#editModal").find("#editb").val(style);
+	        $("#editModal").find("#editc").val(date);
+	        //var date= therow.find("td").eq(2).html();
+	        $("#editModal").modal();
+	        //alert(date);
 	});
 		
 	$('#assignments').change(function() {

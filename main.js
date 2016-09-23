@@ -60,8 +60,10 @@ $( document ).ready(function() {
 		var examstyle = $('#examStyle').find('option:selected').text();
 		
 		var row = '<tr><td>'+examtype+'</td><td>'+examstyle + '</td><td>'+examdate + '</td><td><input type="button" class="removerow" value="Remove">&nbsp&nbsp<input type="button" class="editrow" value="Edit"></td></tr>';
-		if(examdate=='')
+		if(examdate==''){
 			("#dueDate").addClass("error").attr('title', 'An error occurred!');
+			alert('nothing in here')
+		}
 		else
 			$('#ExamStuff').append(row);
 	});
@@ -88,7 +90,7 @@ $( document ).ready(function() {
 		$('#dueDates').empty();
 		for(var i = 0; i< numberOfAssignments; i++){
 			list += '<li><input type="date" id="dueDate'+i+'" class="datefield"> <input type="checkbox" name="q6" value="Unclear" class="dueDateUnclrbox"><label for="Unclear">Unclear</label><br></li>';			
-			
+	
 		}
 		
 		//alert(list);

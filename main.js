@@ -55,14 +55,14 @@ $( document ).ready(function() {
 		examdate = "No date listed";
 		}
 		else{
-			examdate = $('#dueDate').text();
+			examdate = $('#dueDate').val();
 		}
 		var examstyle = $('#examStyle').find('option:selected').text();
 		
 		var row = '<tr><td>'+examtype+'</td><td>'+examstyle + '</td><td>'+examdate + '</td><td><input type="button" class="removerow" value="Remove">&nbsp&nbsp<input type="button" class="editrow" value="Edit"></td></tr>';
 		if(examdate==''){
 			("#dueDate").addClass("error").attr('title', 'An error occurred!');
-			alert('nothing in here')
+			//alert('nothing in here')
 		}
 		else
 			$('#ExamStuff').append(row);

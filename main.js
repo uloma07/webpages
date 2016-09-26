@@ -47,10 +47,12 @@ $('#modal-sandbox-container input').datepicker({
 		else{
 			$(".removerow").removeAttr("disabled");  
 			$("#examType").removeAttr("disabled");  
-			$("#dueDate").removeAttr("disabled");  
+			$("#dueDate").removeAttr("disabled"); 
+			$("#percentage").removeAttr("disabled");
 			$("#examStyle").removeAttr("disabled");  
 			$("#addExamStuff").removeAttr("disabled");			
 			$("#NoDate").removeAttr("disabled");
+			$("#Nopercentage").removeAttr("disabled");
 			if($('#NoDate').is(':checked')){
 				$("#dueDate").attr("disabled", "disabled"); 
 			}

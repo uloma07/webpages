@@ -95,6 +95,8 @@ $('#modal-sandbox-container input').datepicker({
 		}
 		else{
 			$('#ExamStuff').append(row);
+			$("#dueDate").removeAttr("disabled"); 
+			$("#percentage").removeAttr("disabled");
 			$('#dueDate').removeClass("error");
 			$("#dueDate").removeAttr("title");
 			$('#dueDate').val('');

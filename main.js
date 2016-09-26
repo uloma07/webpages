@@ -39,13 +39,16 @@ $('#modal-sandbox-container input').datepicker({
 			$("#dueDate").attr("disabled", "disabled"); 
 			$("#examStyle").attr("disabled", "disabled"); 
 			$("#addExamStuff").attr("disabled", "disabled"); 
+			$("#NoDate").attr("disabled", "disabled"); 
+			
 		}
 		else{
 			$(".removerow").removeAttr("disabled");  
-		$("#examType").removeAttr("disabled");  
-		$("#dueDate").removeAttr("disabled");  
-		$("#examStyle").removeAttr("disabled");  
-		$("#addExamStuff").removeAttr("disabled");
+			$("#examType").removeAttr("disabled");  
+			$("#dueDate").removeAttr("disabled");  
+			$("#examStyle").removeAttr("disabled");  
+			$("#addExamStuff").removeAttr("disabled");
+			$("#NoDate").removeAttr("disabled");
 		}
 	});
 	

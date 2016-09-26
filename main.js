@@ -40,6 +40,8 @@ $('#modal-sandbox-container input').datepicker({
 			$("#examStyle").attr("disabled", "disabled"); 
 			$("#addExamStuff").attr("disabled", "disabled"); 
 			$("#NoDate").attr("disabled", "disabled"); 
+			$("#percentage").attr("disabled", "disabled"); 
+			$("#Nopercentage").attr("disabled", "disabled"); 
 			
 		}
 		else{
@@ -52,6 +54,9 @@ $('#modal-sandbox-container input').datepicker({
 			if($('#NoDate').is(':checked')){
 				$("#dueDate").attr("disabled", "disabled"); 
 			}
+			if($('#Nopercentage').is(':checked')){
+				$("#percentage").attr("disabled", "disabled"); 
+			}
 				
 		}
 	});
@@ -62,17 +67,28 @@ $('#modal-sandbox-container input').datepicker({
 		
 		var examtype = $('#examType').find('option:selected').text();
 		var examdate ="";
+		var percentage = "";
 		if($('#NoDate').is(':checked')){
 		examdate = "No date listed";
 		}
 		else{
 			examdate = $('#dueDate').val();
 		}
+		if($('#Nopercentage').is(':checked')){
+		percentage = "No percentage listed";
+		}
+		else{
+			percentage = $('#percentage').val();
+		}
 		var examstyle = $('#examStyle').find('option:selected').text();
 		
-		var row = '<tr><td>'+examtype+'</td><td>'+examstyle + '</td><td>'+examdate + '</td><td><input type="button" class="removerow" value="Remove">&nbsp&nbsp</td></tr>';
+		var row = '<tr><td>'+examtype+'</td><td>'+examstyle + '</td><td>'+examdate + '</td><td>'+ percentage + '</td><td><input type="button" class="removerow" value="Remove">&nbsp&nbsp</td></tr>';
 		if(examdate==''){
 			$('#dueDate').addClass("error").attr('title', 'An error occurred!');
+			//alert('nothing in here')
+		}
+		else if(percentage==''){
+			$('#percentage').addClass("error").attr('title', 'An error occurred!');
 			//alert('nothing in here')
 		}
 		else{
@@ -80,7 +96,11 @@ $('#modal-sandbox-container input').datepicker({
 			$('#dueDate').removeClass("error");
 			$("#dueDate").removeAttr("title");
 			$('#dueDate').val('');
+			$('#percentage').removeClass("error");
+			$("#percentage").removeAttr("title");
+			$('#percentage').val('');
 			$('#NoDate').attr('checked', false); // Unchecks it
+			$('#Nopercentage').attr('checked', false);
 		}
 	});
 	

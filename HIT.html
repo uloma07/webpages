@@ -75,7 +75,7 @@
 
 	<div class="form-group">
 	   <label>6. How many study hours per week are recommended?</label><br>
-		<input type="number" name="q6" placeholder="0" id="recommendedHrs" class="col-xs-4">
+		<input type="number" name="q6" placeholder="0" id="recommendedHrs" class="col-xs-4" min="0">
 		<br>
 		<br>
 		<input type="checkbox" name="q6" value="Unclear" id="recommendedUnclr">&nbsp I don't know<br>	
@@ -267,7 +267,7 @@
 				
 				<div class="form-group col-md-3">
 					<label for="Percentage">Percentage</label>
-				  <div><input type="number" id="percentage" class="form-control" placeholder="Enter  percentage"></div> &nbsp <input type="checkbox" name="Nopercentage" value="Nopercentage" id="Nopercentage"><label for="Nopercentage">&nbsp No percentage listed</label>
+				  <div><input type="number" id="percentage" min="0" max="100" class="form-control" placeholder="Enter  percentage"></div> &nbsp <input type="checkbox" name="Nopercentage" value="Nopercentage" id="Nopercentage"><label for="Nopercentage">&nbsp No percentage listed</label>
 				</div>			
 				
 			</div>

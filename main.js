@@ -187,7 +187,7 @@ $('#modal-sandbox-container input').datepicker({
 					$("#dueDate").removeAttr("disabled");   
 			});
 	
-		$('#Nopercantage').click(function(){
+		$('#Nopercentage').click(function(){
 		//alert('here i amSS');
 				if($(this).is(':checked')){
 					//disable textbox

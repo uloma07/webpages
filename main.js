@@ -103,8 +103,8 @@ $('#modal-sandbox-container input').datepicker({
 			$('#percentage').removeClass("error");
 			$("#percentage").removeAttr("title");
 			$('#percentage').val('');
-			$('#NoDate').attr('checked', false); // Unchecks it
-			$('#Nopercentage').attr('checked', false);
+			$('#NoDate').prop('checked', false); // Unchecks it
+			$('#Nopercentage').prop('checked', false);
 		}
 	});
 	
@@ -141,7 +141,7 @@ $('#modal-sandbox-container input').datepicker({
 			$('#editc').removeClass("error");
 			$("#editc").removeAttr("title");
 			$('#editc').val('');
-			$('#NoDateModal').attr('checked', false); // Unchecks it
+			$('#NoDateModal').prop('checked', false); // Unchecks it
 		}
 	});
 	

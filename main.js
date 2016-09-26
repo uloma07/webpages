@@ -47,8 +47,12 @@ $('#modal-sandbox-container input').datepicker({
 			$("#examType").removeAttr("disabled");  
 			$("#dueDate").removeAttr("disabled");  
 			$("#examStyle").removeAttr("disabled");  
-			$("#addExamStuff").removeAttr("disabled");
+			$("#addExamStuff").removeAttr("disabled");			
 			$("#NoDate").removeAttr("disabled");
+			if($('#NoDate').is(':checked')){
+				$("#dueDate").attr("disabled", "disabled"); 
+			}
+				
 		}
 	});
 	

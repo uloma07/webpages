@@ -186,6 +186,17 @@ $('#modal-sandbox-container input').datepicker({
 				else
 					$("#dueDate").removeAttr("disabled");   
 			});
+	
+		$('#Nopercantage').click(function(){
+		//alert('here i amSS');
+				if($(this).is(':checked')){
+					//disable textbox
+					$("#percantage").attr("disabled", "disabled");
+					
+				}
+				else
+					$("#percantage").removeAttr("disabled");   
+			});
 			
 		$('#NoDateModal').click(function(){
 		//alert('here i amSS');

@@ -191,11 +191,11 @@ $('#modal-sandbox-container input').datepicker({
 		//alert('here i amSS');
 				if($(this).is(':checked')){
 					//disable textbox
-					$("#percantage").attr("disabled", "disabled");
+					$("#percentage").attr("disabled", "disabled");
 					
 				}
 				else
-					$("#percantage").removeAttr("disabled");   
+					$("#percentage").removeAttr("disabled");   
 			});
 			
 		$('#NoDateModal').click(function(){

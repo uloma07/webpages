@@ -89,7 +89,7 @@ $('#modal-sandbox-container input').datepicker({
 			$('#dueDate').addClass("error").attr('title', 'An error occurred!');
 			//alert('nothing in here')
 		}
-		else if(percentage==''){
+		else if(percentage=='' || percentage>100 || percentage<0){
 			$('#percentage').addClass("error").attr('title', 'An error occurred!');
 			//alert('nothing in here')
 		}

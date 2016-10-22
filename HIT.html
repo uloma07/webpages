@@ -17,22 +17,47 @@
 	   background: Yellow; border: 1px solid red; 
 	}
 	</style>
+	  
+	  <script type="text/javascript" language="JavaScript"><!--
+ 
+// Given the ID of the assignmentId form field element, populate it
+// with the assignmentId parameter from the URL.  If no assignment ID
+// is present, inform the worker that the HIT is being previewed.
+function populateAssignmentID(field_id) {
+  var assignment_id_field = document.getElementById(field_id);
+  var paramstr = window.location.search.substring(1);
+  var parampairs = paramstr.split("&");
+  for (i in parampairs) {
+    var pair = parampairs[i].split("=");
+    if (pair[0] == "assignmentId") {
+      if (pair[1] == "ASSIGNMENT_ID_NOT_AVAILABLE") {
+        document.getElementById(&#39;previewnotice&#39;).innerHTML =
+          "<p><b>You are previewing this HIT.</b>  To perform this HIT, please accept it.</p>";
+      } else {
+        assignment_id_field.value = pair[1];
+      }
+      return;
+    }
+  }
+}
+
+// --></script>
 
 </head>
 
-  <body> 
+  <body onload="populateAssignmentID('myAssignmentId')"> 
   <div class="container">
     <h3>Kindly answer the following questions about the document shown</h3> 
-    <form id="mturk_form" method="post" action="{{turk_submit_url}}/externalSubmit" >
+    <form id="mturk_form" method="post" action="https://workersandbox.mturk.com/mturk/externalSubmit" >
 	<fieldset>
-    <input type="hidden" name="user_id" id="user_id" />
-    <input type="hidden" name="assignmentId" value="{{assignmentId}}" />
-	<input type="hidden" name="key" value="syllabi/">
-    <input type="hidden" name="AWSAccessKeyId" value="AKIAJWCATF4RZ2SQTOZA"> 
+    <input type="hidden" name="user_id" id="" />
+    <input type="hidden" name="assignmentId" value="" />
+	<input type="hidden" name="key" value="syllabibkt/">
+    <input type="hidden" name="AWSAccessKeyId" value="AKIAJT57KBCL4MLIHBEA"> 
     <input type="hidden" name="acl" value="private"> 
-    <input type="hidden" name="success_action_redirect" value="http://localhost/">
-    <input type="hidden" name="policy" value="eyJleHBpcmF0aW9uIjogIjIwMjAtMDEtMDFUMDA6MDA6MDBaIiwKICAiY29uZGl0aW9ucyI6IFsKICAgIHsiYnVja2V0IjogInN5bGxhYmlia3QifSwKICAgIFsic3RhcnRzLXdpdGgiLCAiJGtleSIsICJzeWxsYWJpLyJdLAogICAgeyJhY2wiOiAicHJpdmF0ZSJ9LAogICAgeyJzdWNjZXNzX2FjdGlvbl9yZWRpcmVjdCI6ICJodHRwOi8vbG9jYWxob3N0LyJ9LAogICAgWyJzdGFydHMtd2l0aCIsICIkQ29udGVudC1UeXBlIiwgIiJdCiAgXQp9">
-    <input type="hidden" name="signature" value="qF74J3Zjovers9qoyenzcqkp+2g=">
+    <input type="hidden" name="success_action_redirect" value="https://uloma07.github.io/webpages/success.html">
+    <input type="hidden" name="policy" value="eyJleHBpcmF0aW9uIjogIjIwMjAtMDEtMDFUMDA6MDA6MDBaIiwKICAiY29uZGl0aW9ucyI6IFsgCiAgICB7ImJ1Y2tldCI6ICJzeWxsYWJpYmt0In0sIAogICAgWyJzdGFydHMtd2l0aCIsICIka2V5IiwgIiJdLAogICAgeyJhY2wiOiAicHJpdmF0ZSJ9LAogICAgeyJzdWNjZXNzX2FjdGlvbl9yZWRpcmVjdCI6ICJodHRwczovL3Vsb21hMDcuZ2l0aHViLmlvL3dlYnBhZ2VzL3N1Y2Nlc3MuaHRtbCJ9LAogICAgWyJzdGFydHMtd2l0aCIsICIkQ29udGVudC1UeXBlIiwgImFwcGxpY2F0aW9uL3BkZiJdICAgIAogIF0KfQ==">
+    <input type="hidden" name="signature" value="TuSsNLBzHlDS+ZH1pDIynyiQKj0=">
 	
 	
    <div class="form-group">

@@ -123,7 +123,7 @@ $('#modal-sandbox-container input').datepicker({
 	
 	$("#ExamStuff").on('click','.removerow',function(){
 		var index = $(this).parent().parent().index();
-		json.splice(index,1);
+		json.splice(index-1,1);
 		$("#tabledata").val(JSON.stringify(json));
         $(this).parent().parent().remove();
 		

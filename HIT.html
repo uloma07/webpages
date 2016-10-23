@@ -57,18 +57,19 @@ var doc_field = document.getElementById(doc_id);
   <body onload="populateAssignmentID('myAssignmentId','doc_id')"> 
   <div class="container">
     <h3>Kindly answer the following questions about the document shown</h3> 
-	<a href="#" target="_blank" id="doc_id">Click here to download document</a>
+	<a href="#" target="_blank" id="doc_id">Click here to download document</a><br>
     <form id="mturk_form" method="post" action="https://workersandbox.mturk.com/mturk/externalSubmit" >
 	<fieldset>
-    <input type="hidden" name="user_id" id="" />
-    <input type="hidden" name="assignmentId" id="myAssignmentId" value="" />
+		<input type="hidden" name="assignmentId" id="myAssignmentId" value="" />
+		<!--
+    <input type="hidden" name="user_id" id="" />    
 	<input type="hidden" name="key" value="syllabibkt/">
     <input type="hidden" name="AWSAccessKeyId" value="AKIAJT57KBCL4MLIHBEA"> 
     <input type="hidden" name="acl" value="private"> 
     <input type="hidden" name="success_action_redirect" value="https://uloma07.github.io/webpages/success.html">
     <input type="hidden" name="policy" value="eyJleHBpcmF0aW9uIjogIjIwMjAtMDEtMDFUMDA6MDA6MDBaIiwKICAiY29uZGl0aW9ucyI6IFsgCiAgICB7ImJ1Y2tldCI6ICJzeWxsYWJpYmt0In0sIAogICAgWyJzdGFydHMtd2l0aCIsICIka2V5IiwgIiJdLAogICAgeyJhY2wiOiAicHJpdmF0ZSJ9LAogICAgeyJzdWNjZXNzX2FjdGlvbl9yZWRpcmVjdCI6ICJodHRwczovL3Vsb21hMDcuZ2l0aHViLmlvL3dlYnBhZ2VzL3N1Y2Nlc3MuaHRtbCJ9LAogICAgWyJzdGFydHMtd2l0aCIsICIkQ29udGVudC1UeXBlIiwgImFwcGxpY2F0aW9uL3BkZiJdICAgIAogIF0KfQ==">
     <input type="hidden" name="signature" value="TuSsNLBzHlDS+ZH1pDIynyiQKj0=">
-	
+	-->
 	
    <div class="form-group">
 	<label>1. Is this class graded on a curve?</label><br>
@@ -282,7 +283,7 @@ var doc_field = document.getElementById(doc_id);
 			<div class="row">
 				<div class="col-md-3">
 					<label for="examType">Type</label>
-					<select name="q26a" id="examType" class="form-control" >
+					<select id="examType" class="form-control" >
 						<option value="Assignment">Assignment</option>
 						<option value="Exam">Exam</option>
 						<option value="Lab">Lab</option>
@@ -290,8 +291,8 @@ var doc_field = document.getElementById(doc_id);
 					</select>    
 				</div>
 				<div class="col-md-3">
-					<label for="q26b">Delivery</label>
-					<select name="q26b" id="examStyle" class="form-control">
+					<label for="examStyle">Delivery</label>
+					<select id="examStyle" class="form-control">
 					  <option value="Essay">Essay</option>
 						<option value="Multiple Choice">Multiple Choice</option>
 						<option value="Lab">Lab</option>
@@ -305,12 +306,12 @@ var doc_field = document.getElementById(doc_id);
 				
 				<div class="form-group col-md-3">
 					<label for="dueDate">Date</label>
-				  <div id="sandbox-container" ><input  name="q26c" type="text" id="dueDate" class="form-control" placeholder="Click to select date"></div> &nbsp <input type="checkbox" name="NoDate" value="NoDate" id="NoDate"><label for="NoDate">&nbsp No date listed</label>
+				  <div id="sandbox-container" ><input type="text" id="dueDate" class="form-control" placeholder="Click to select date"></div> &nbsp <input type="checkbox" name="NoDate" value="NoDate" id="NoDate"><label for="NoDate">&nbsp No date listed</label>
 				</div>
 				
 				<div class="form-group col-md-3">
-					<label for="Percentage">Percentage</label>
-				  <div><input  name="q26d" type="number" id="percentage" min="0" max="100" class="form-control" placeholder="Enter  percentage"></div> &nbsp <input type="checkbox" name="Nopercentage" value="Nopercentage" id="Nopercentage"><label for="Nopercentage">&nbsp No percentage listed</label>
+					<label for="percentage">Percentage</label>
+				  <div><input type="number" id="percentage" min="0" max="100" class="form-control" placeholder="Enter  percentage"></div> &nbsp <input type="checkbox" name="Nopercentage" value="Nopercentage" id="Nopercentage"><label for="Nopercentage">&nbsp No percentage listed</label>
 				</div>			
 				
 			</div>
@@ -325,12 +326,12 @@ var doc_field = document.getElementById(doc_id);
 		</div>
 		<div class="panel-body">	
 			<br>				  
-			<table id="ExamStuff"  border="0" data-role="table" class="table table-bordered">
+			<table id="ExamStuff"  border="0" data-role="table" class="table table-bordered" name="q26a">
 				<tr><th>Exam Type</th><th>Exam Style</th><th>Due Date</th><th>Percentage</th><th> </th></tr>	
 			</table>
 	
 		</div>	
-		<div class="panel-footer"> <input type="checkbox" name="q27d" value="Complex" id="complex"><label for="Complex">&nbsp Grading scheme is too complex to list here</label><br>
+		<div class="panel-footer"> <input type="checkbox" name="q2b6" value="Complex" id="complex"><label for="Complex">&nbsp Grading scheme is too complex to list here</label><br>
 		</div>
 	</div>
 </div>

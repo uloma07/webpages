@@ -63,6 +63,7 @@ $('#modal-sandbox-container input').datepicker({
 		}
 	});
 	
+	var examTypeCount = 1;
 	
 	$('#addExamStuff').click(function() {
 		var ListItem ='';

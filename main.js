@@ -63,7 +63,7 @@ $('#modal-sandbox-container input').datepicker({
 		}
 	});
 	
-	var examTypeCount = 1;
+	var json = [];
 	
 	$('#addExamStuff').click(function() {
 		var ListItem ='';
@@ -86,6 +86,7 @@ $('#modal-sandbox-container input').datepicker({
 		var examstyle = $('#examStyle').find('option:selected').text();
 		
 		var row = '<tr><td>'+examtype+'</td><td>'+examstyle + '</td><td>'+examdate + '</td><td>'+ percentage + '</td><td><input type="button" class="removerow" value="Remove">&nbsp&nbsp</td></tr>';
+		
 		if(examdate==''){
 			$('#dueDate').addClass("error").attr('title', 'An error occurred!');
 			//alert('nothing in here')
@@ -96,6 +97,8 @@ $('#modal-sandbox-container input').datepicker({
 		}
 		else{
 			$('#ExamStuff').append(row);
+			var text = {"examtype":examtype,"examstyle":examstyle,"examdate":examdate,"percentage":percentage};
+			json.push(text);
 			$("#dueDate").removeAttr("disabled"); 
 			$("#percentage").removeAttr("disabled");
 			$('#dueDate').removeClass("error");
@@ -118,7 +121,10 @@ $('#modal-sandbox-container input').datepicker({
 	
 	
 	$("#ExamStuff").on('click','.removerow',function(){
+		var index = $(this).parent().parent().index();
+		json.splice(index,1);
         $(this).parent().parent().remove();
+		
 	});
 	
 	$("#save").click(function(){

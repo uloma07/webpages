@@ -99,6 +99,7 @@ $('#modal-sandbox-container input').datepicker({
 			$('#ExamStuff').append(row);
 			var text = {"examtype":examtype,"examstyle":examstyle,"examdate":examdate,"percentage":percentage};
 			json.push(text);
+			$("#tabledata").val(JSON.stringify(json));
 			$("#dueDate").removeAttr("disabled"); 
 			$("#percentage").removeAttr("disabled");
 			$('#dueDate').removeClass("error");
@@ -123,6 +124,7 @@ $('#modal-sandbox-container input').datepicker({
 	$("#ExamStuff").on('click','.removerow',function(){
 		var index = $(this).parent().parent().index();
 		json.splice(index,1);
+		$("#tabledata").val(JSON.stringify(json));
         $(this).parent().parent().remove();
 		
 	});

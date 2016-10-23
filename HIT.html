@@ -23,12 +23,15 @@
 // Given the ID of the assignmentId form field element, populate it
 // with the assignmentId parameter from the URL.  If no assignment ID
 // is present, inform the worker that the HIT is being previewed.
-function populateAssignmentID(field_id) {
+function populateAssignmentID(field_id,doc_id) {
   var assignment_id_field = document.getElementById(field_id);
+var doc_field = document.getElementById(doc_id);
   var paramstr = window.location.search.substring(1);
   var parampairs = paramstr.split("&");
   for (i in parampairs) {
     var pair = parampairs[i].split("=");
+	  
+	  
     if (pair[0] == "assignmentId") {
       if (pair[1] == "ASSIGNMENT_ID_NOT_AVAILABLE") {
         document.getElementById('previewnotice').innerHTML =
@@ -36,8 +39,14 @@ function populateAssignmentID(field_id) {
       } else {
         assignment_id_field.value = pair[1];
       }
-      return;
+      //return;
     }
+	  else if(pair[0] == "doc"){
+	  if(pair[1] != ""){
+		doc_field.href = pair[1];  
+	  }
+	}
+	  
   }
 }
 
@@ -48,6 +57,7 @@ function populateAssignmentID(field_id) {
   <body onload="populateAssignmentID('myAssignmentId')"> 
   <div class="container">
     <h3>Kindly answer the following questions about the document shown</h3> 
+	<a href="#" id="doc_id">Click here to download document</a>
     <form id="mturk_form" method="post" action="https://workersandbox.mturk.com/mturk/externalSubmit" >
 	<fieldset>
     <input type="hidden" name="user_id" id="" />
@@ -295,12 +305,12 @@ function populateAssignmentID(field_id) {
 				
 				<div class="form-group col-md-3">
 					<label for="dueDate">Date</label>
-				  <div id="sandbox-container" ><input type="text" id="dueDate" class="form-control" placeholder="Click to select date"></div> &nbsp <input type="checkbox" name="NoDate" value="NoDate" id="NoDate"><label for="NoDate">&nbsp No date listed</label>
+				  <div id="sandbox-container" ><input  name="q26c" type="text" id="dueDate" class="form-control" placeholder="Click to select date"></div> &nbsp <input type="checkbox" name="NoDate" value="NoDate" id="NoDate"><label for="NoDate">&nbsp No date listed</label>
 				</div>
 				
 				<div class="form-group col-md-3">
 					<label for="Percentage">Percentage</label>
-				  <div><input type="number" id="percentage" min="0" max="100" class="form-control" placeholder="Enter  percentage"></div> &nbsp <input type="checkbox" name="Nopercentage" value="Nopercentage" id="Nopercentage"><label for="Nopercentage">&nbsp No percentage listed</label>
+				  <div><input  name="q26d" type="number" id="percentage" min="0" max="100" class="form-control" placeholder="Enter  percentage"></div> &nbsp <input type="checkbox" name="Nopercentage" value="Nopercentage" id="Nopercentage"><label for="Nopercentage">&nbsp No percentage listed</label>
 				</div>			
 				
 			</div>

@@ -44,6 +44,7 @@ var doc_field = document.getElementById(doc_id);
 	  else if(pair[0] == "doc"){
 	  if(pair[1] != ""){
 		doc_field.href = pair[1];  
+		document.getElementById('doc_name').value = pair[1];
 	  }
 	}
 	  
@@ -61,6 +62,7 @@ var doc_field = document.getElementById(doc_id);
     <form id="mturk_form" method="post" action="https://workersandbox.mturk.com/mturk/externalSubmit" >
 	<fieldset>
 		<input type="hidden" name="assignmentId" id="myAssignmentId" value="" />
+		<input type="hidden" name="doc_name" value="" />
 		<!--
     <input type="hidden" name="user_id" id="" />    
 	<input type="hidden" name="key" value="syllabibkt/">
@@ -73,21 +75,21 @@ var doc_field = document.getElementById(doc_id);
 	
    <div class="form-group">
 	<label>1. Is this class graded on a curve?</label><br>
-	<input type="radio" name="q1" value="Yes">&nbsp Yes<br>
+	<input type="radio" name="q1" value="Yes" required>&nbsp Yes<br>
 	<input type="radio" name="q1" value="No">&nbsp No<br>
 	<input type="radio" name="q1" value="Unclear">&nbsp I don't know<br>
 	</div>
 		
    <div class="form-group">
     <label>2. Is there a final project in the class?</label><br>  
-    	<input type="radio" name="q2" value="Yes">&nbsp Yes<br>
+    	<input type="radio" name="q2" value="Yes" required>&nbsp Yes<br>
 	<input type="radio" name="q2" value="No">&nbsp No<br>
 	<input type="radio" name="q2" value="Unclear">&nbsp I don't know<br>
 </div>
 
 	<div class="form-group">
 		<label>3. How many assignments are there in the class?</label> <br>
-		<select name="q3" id="assignments" class="col-xs-4">
+		<select name="q3" id="assignments" class="col-xs-4" required>
 			<option value="0">0</option>
 			<option value="1">1</option>
 			<option value="2">2</option>
@@ -105,14 +107,14 @@ var doc_field = document.getElementById(doc_id);
 	<br>
 	<div class="form-group">
    	<label >4. Is there a cartoon, comic, or other illustration in this syllabus?</label><br>
-    	<input type="radio" name="q4" value="Yes">&nbsp Yes<br>
+    	<input type="radio" name="q4" value="Yes" required>&nbsp Yes<br>
  	<input type="radio" name="q4" value="No">&nbsp No<br>
  	<input type="radio" name="q4" value="Unclear">&nbsp I don't know<br>
 	</div>
 
 	<div class="form-group">
 	   <label>5. Are the learning objectives clearly stated?</label><br>
-		<input type="radio" name="q5" value="Yes">&nbsp Yes<br>
+		<input type="radio" name="q5" value="Yes" required>&nbsp Yes<br>
 		<input type="radio" name="q5" value="No">&nbsp No<br>
 		<input type="radio" name="q5" value="Unclear">&nbsp  I don't know<br>
 	</div>
@@ -127,7 +129,7 @@ var doc_field = document.getElementById(doc_id);
 
 <div class="form-group">
   <label for="q7">7. How many instructors does the class have?</label><br>  
-  <select name="q7" class="col-xs-4">
+  <select name="q7" class="col-xs-4" required>
   <option value="0">0</option>
     <option value="1">1</option>
     <option value="2">2</option>
@@ -145,28 +147,28 @@ var doc_field = document.getElementById(doc_id);
 <br>
 <div class="form-group">
    <label>8. Is there a score for attendance/participation in the class?</label><br>
-    <input type="radio" name="q8" value="Yes">&nbsp Yes<br>
+    <input type="radio" name="q8" value="Yes" required>&nbsp Yes<br>
  <input type="radio" name="q8" value="No">&nbsp No<br>
  <input type="radio" name="q8" value="Unclear">&nbsp I don't know<br>
 </div>
 
 <div class="form-group">
    <label for="q9">9. Are the reading materials clearly listed?</label><br>
-    <input type="radio" name="q9" value="Yes">&nbsp Yes<br>
+    <input type="radio" name="q9" value="Yes" required>&nbsp Yes<br>
  <input type="radio" name="q9" value="No">&nbsp No<br>
  <input type="radio" name="q9" value="Unclear">&nbsp I don't know<br>
 </div>
 
 <div class="form-group">
 	   <label for="q10">10. Does the class include a lab/practical component?</label><br>
-		<input type="radio" name="q10" value="Yes">&nbsp Yes<br>
+		<input type="radio" name="q10" value="Yes" required>&nbsp Yes<br>
 		<input type="radio" name="q10" value="No">&nbsp No<br>
 		<input type="radio" name="q10" value="Unclear">&nbsp I don't know<br>
 	</div>
 
 <div class="form-group">
    <label for="q11">11. Are there any group projects or assignments? </label><br>
-    <input type="radio" name="q11" value="Yes">&nbsp Yes<br>
+    <input type="radio" name="q11" value="Yes" required>&nbsp Yes<br>
  <input type="radio" name="q11" value="No">&nbsp No<br>
  <input type="radio" name="q11" value="Unclear">&nbsp I don't know<br>
 </div>
@@ -174,35 +176,35 @@ var doc_field = document.getElementById(doc_id);
 
 <div class="form-group">
    <label for="q12">12. Are there any in-person presentations required from the students? </label><br>
-    <input type="radio" name="q12" value="Yes">&nbsp Yes<br>
+    <input type="radio" name="q12" value="Yes" required>&nbsp Yes<br>
  <input type="radio" name="q12" value="No">&nbsp No<br>
  <input type="radio" name="q12" value="Unclear">&nbsp I don't know<br>
 </div>
 
 <div class="form-group">
    <label for="q13">13. Does the course have tutorials? </label><br>
-    <input type="radio" name="q13" value="Yes">&nbsp Yes<br>
+    <input type="radio" name="q13" value="Yes" required>&nbsp Yes<br>
  <input type="radio" name="q13" value="No">&nbsp No<br>
  <input type="radio" name="q13" value="Unclear">&nbsp I don't know<br>
 </div>
 
 <div class="form-group">
    <label for="q14">14. Does the course contain contact information for instructors? </label><br>
-    <input type="radio" name="q14" value="Yes">&nbsp Yes<br>
+    <input type="radio" name="q14" value="Yes" required>&nbsp Yes<br>
  <input type="radio" name="q14" value="No">&nbsp No<br>
  <input type="radio" name="q14" value="Unclear">&nbsp I don't know<br>
 </div>
 
 <div class="form-group">
    <label for="q15">15. Does the course have an assigned online discussion forum? </label><br>
-    <input type="radio" name="q15" value="Yes">&nbsp Yes<br>
+    <input type="radio" name="q15" value="Yes" required>&nbsp Yes<br>
  <input type="radio" name="q15" value="No">&nbsp No<br>
  <input type="radio" name="q15" value="Unclear">&nbsp I don't know<br>
 </div>
 
 <div class="form-group">
    <label for="q16">16. Does the course require the use of any software package? </label><br>
-    <input type="radio" name="q16" value="Yes">&nbsp Yes<br>
+    <input type="radio" name="q16" value="Yes" required>&nbsp Yes<br>
  <input type="radio" name="q16" value="No">&nbsp No<br>
  <input type="radio" name="q16" value="Unclear">&nbsp I don't know<br>
 </div>
@@ -210,14 +212,14 @@ var doc_field = document.getElementById(doc_id);
 
 <div class="form-group">
    <label for="q17">17. Is there a clearly stated timeline/course schedule? </label><br>
-    <input type="radio" name="q17" value="Yes">&nbsp Yes<br>
+    <input type="radio" name="q17" value="Yes" required>&nbsp Yes<br>
  <input type="radio" name="q17" value="No">&nbsp No<br>
  <input type="radio" name="q17" value="Unclear">&nbsp I don't know<br>
 </div>
 
 <div class="form-group">
    <label for="q18">18. Is the location of the class listed?</label><br>
-    <input type="radio" name="q18" value="Yes">&nbsp Yes<br>
+    <input type="radio" name="q18" value="Yes" required>&nbsp Yes<br>
  <input type="radio" name="q18" value="No">&nbsp No<br>
  <input type="radio" name="q18" value="Unclear">&nbsp I don't know<br>
 </div>
@@ -225,7 +227,7 @@ var doc_field = document.getElementById(doc_id);
 <div class="form-group">
    <label for="q19">19. Is there a clearly stated dishonesty or academic integrity policy on the document?
  </label><br>
-    <input type="radio" name="q19" value="Yes">&nbsp Yes<br>
+    <input type="radio" name="q19" value="Yes" required>&nbsp Yes<br>
  <input type="radio" name="q19" value="No">&nbsp No<br>
  <input type="radio" name="q19" value="Unclear">&nbsp I don't know<br>
 </div>
@@ -233,7 +235,7 @@ var doc_field = document.getElementById(doc_id);
 
 <div class="form-group">
    <label for="q20">20.Are there course withdrawal dates detailed on the document?</label><br>
-    <input type="radio" name="q20" value="Yes">&nbsp Yes<br>
+    <input type="radio" name="q20" value="Yes" required>&nbsp Yes<br>
  <input type="radio" name="q20" value="No">&nbsp No<br>
  <input type="radio" name="q20" value="Unclear">&nbsp I don't know<br>
 </div>
@@ -241,7 +243,7 @@ var doc_field = document.getElementById(doc_id);
 
 <div class="form-group">
    <label for="q21">21. Is there a policy for late assignments?</label><br>
-    <input type="radio" name="q21" value="Yes">&nbsp Yes<br>
+    <input type="radio" name="q21" value="Yes" required>&nbsp Yes<br>
  <input type="radio" name="q21" value="No">&nbsp No<br>
  <input type="radio" name="q21" value="Unclear">&nbsp I don't know<br>
 </div>
@@ -249,21 +251,21 @@ var doc_field = document.getElementById(doc_id);
 
 <div class="form-group">
    <label for="q22">22. Can extra credit be earned on this course? </label><br>
-    <input type="radio" name="q22" value="Yes">&nbsp Yes<br>
+    <input type="radio" name="q22" value="Yes" required>&nbsp Yes<br>
  <input type="radio" name="q22" value="No">&nbsp No<br>
  <input type="radio" name="q22" value="Unclear">&nbsp I don't know<br>
 </div>
 
 <div class="form-group">
    <label for="q23">23. Does this course have any extra fees/costs? </label><br>
-    <input type="radio" name="q23" value="Yes">&nbsp Yes<br>
+    <input type="radio" name="q23" value="Yes" required>&nbsp Yes<br>
  <input type="radio" name="q23" value="No">&nbsp No<br>
  <input type="radio" name="q23" value="Unclear">&nbsp I don't know<br>
 </div>
 
 <div class="form-group">
    <label for="q24">24. Is the date and time of each class listed?</label><br>
-    <input type="radio" name="q24" value="Yes">&nbsp Yes<br>
+    <input type="radio" name="q24" value="Yes" required>&nbsp Yes<br>
  <input type="radio" name="q24" value="No">&nbsp No<br>
  <input type="radio" name="q24" value="Unclear">&nbsp I don't know<br>
 </div>

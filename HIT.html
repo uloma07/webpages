@@ -24,29 +24,35 @@
 // with the assignmentId parameter from the URL.  If no assignment ID
 // is present, inform the worker that the HIT is being previewed.
 function populateAssignmentID(field_id,doc_id) {
-  var assignment_id_field = document.getElementById(field_id);
-var doc_field = document.getElementById(doc_id);
-  var paramstr = window.location.search.substring(1);
-  var parampairs = paramstr.split("&");
-  for (i in parampairs) {
-    var pair = parampairs[i].split("=");
-	  
-	  
-    if (pair[0] == "assignmentId") {
-      if (pair[1] == "ASSIGNMENT_ID_NOT_AVAILABLE") {
-        document.getElementById('previewnotice').innerHTML =
-          "<p><b>You are previewing this HIT.</b>  To perform this HIT, please accept it.</p>";
-      } else {
-        assignment_id_field.value = pair[1];
-      }
-      //return;
-    }
-	  else if(pair[0] == "doc"){
-	  if(pair[1] != ""){
-		doc_field.href = pair[1];  
-		document.getElementById('doc_name').value = pair[1];
-	  }
-	}
+	var assignment_id_field = document.getElementById(field_id);
+	var doc_field = document.getElementById(doc_id);
+	
+	var paramstr = window.location.search.substring(1);
+	var parampairs = paramstr.split("&");
+	for (i in parampairs) {
+		var pair = parampairs[i].split("=");	  
+    		if (pair[0] == "assignmentId") {
+			//.toLowerCase()
+			if(pair[1] != ""){
+			assignment_id_field.value = pair[1];		
+			}      		 
+		}
+		else if(pair[0] == "doc"){
+			  if(pair[1] != ""){
+				doc_field.href = pair[1];  
+				document.getElementById('doc_name').value = pair[1];
+			  }
+		}
+		else if(pair[0].toLowerCase() == "workerid"){
+			  if(pair[1] != ""){			
+				document.getElementById('worker_id').value = pair[1];
+			  }
+		}
+		else if(pair[0].toLowerCase() == "hitid"){
+			  if(pair[1] != ""){			
+				document.getElementById('hit_id').value = pair[1];
+			  }
+		}
 	  
   }
 }
@@ -59,10 +65,13 @@ var doc_field = document.getElementById(doc_id);
   <div class="container">
     <h3>Kindly answer the following questions about the document shown</h3> 
 	<a href="#" target="_blank" id="doc_id">Click here to download document</a><br>
-    <form id="mturk_form" method="post" action="https://workersandbox.mturk.com/mturk/externalSubmit" >
+    <form id="mturk_form" method="post" action="https://www.mturk.com/mturk/externalSubmit" >
 	<fieldset>
 		<input type="hidden" name="assignmentId" id="myAssignmentId" value="" />
+		<input type="hidden" name="workerId" id="worker_id" value="" />
+		<input type="hidden" name="hitId" id="hit_id" value="" />
 		<input type="hidden" name="doc_name" id="doc_name" value="" />
+		
 		<!--
     <input type="hidden" name="user_id" id="" />    
 	<input type="hidden" name="key" value="syllabibkt/">

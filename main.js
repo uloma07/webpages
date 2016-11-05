@@ -2,6 +2,10 @@ $( document ).ready(function() {
 	
     // Your code here.
    var theeditrow = null;
+	var timer = 0;
+	
+	clock = setInterval(function stopWatch(){timer++;}, 1000);
+	
     
     $('#sandbox-container input').datepicker({
 });
@@ -221,6 +225,12 @@ $('#modal-sandbox-container input').datepicker({
 				else
 					$("#editc").removeAttr("disabled");   
 			});
+	
+	$(window).unload(function(){		
+		$('#timer').val(timer);
+		window.clearInterval(clock);
+		timer = 0;
+	});
 	
 	$('#dueDates').on('click', '.dueDateUnclrbox', function(){
 		//alert('here i amSS');

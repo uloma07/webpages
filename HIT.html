@@ -19,6 +19,13 @@
 	</style>
 	  
 	  <script type="text/javascript" language="JavaScript">
+	var clocktimer = 0;
+	clock = setInterval(function stopWatch(){clocktimer++;}, 1000);	  
+	window.onunload = function() {
+    		document.getElementById('timer').value = clocktimer;
+		window.clearInterval(clock);
+		clocktimer = 0;
+	}
  
 // Given the ID of the assignmentId form field element, populate it
 // with the assignmentId parameter from the URL.  If no assignment ID

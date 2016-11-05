@@ -71,7 +71,7 @@ function populateAssignmentID(field_id,doc_id) {
   <div class="container">
     <h3>Kindly answer the following questions about the document shown</h3> 
 	<a href="#" target="_blank" id="doc_id">Click here to download syllabus</a><br><br>
-    <form id="mturk_form" method="post" action="https://workersandbox.mturk.com/mturk/externalSubmit" >
+    <form id="mturk_form" method="post" action="https://www.mturk.com/mturk/externalSubmit" >
 	<fieldset>
 		<input type="hidden" name="assignmentId" id="myAssignmentId" value="" />
 		<input type="hidden" name="workerId" id="worker_id" value="" />
@@ -286,7 +286,7 @@ function populateAssignmentID(field_id,doc_id) {
 </div>
 
 <div class="form-group">
-   <label for="q25">25. If this document has multiple "titles" or "sections", please list the titles one per line. </label><button type="button" class="btn btn-link" id="myBtn">See example</button><br>
+   <label for="q25">25. If this document has multiple "titles" or "sections", please list the titles one per line, ending each line with a semicolon(;). </label><button type="button" class="btn btn-link" id="myBtn">See example</button><br>
     <textarea name="q25" placeholder="e.g. Introduction to Linear Algebra" rows=8 cols=50 class="form-control"></textarea><br>
 </div>
 
@@ -373,10 +373,10 @@ function populateAssignmentID(field_id,doc_id) {
         <br>
           <h4>Answer:</h4>
           <div style="border: 1px solid black; padding: 5px;">
-          <p>Introduction to the Course: Where and When</p>
-          <p>Land, People, Languages</p>
-          <p>The rediscovery of the Ancient Near East</p>
-          <p>The Decipherment of the Ancient Scripts and Languages</p>
+          <p>Introduction to the Course: Where and When;</p>
+          <p>Land, People, Languages;</p>
+          <p>The rediscovery of the Ancient Near East;</p>
+          <p>The Decipherment of the Ancient Scripts and Languages;</p>
           </div>
         </div>
         <div class="modal-footer">

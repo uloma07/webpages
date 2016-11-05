@@ -20,9 +20,8 @@
 	  
 	  <script type="text/javascript" language="JavaScript">
 	var clocktimer = 0;
-	clock = setInterval(function stopWatch(){clocktimer++;}, 1000);	  
-	window.onunload = function() {
-    		document.getElementById('timer').value = clocktimer;
+	clock = setInterval(function stopWatch(){document.getElementById('timer').value = clocktimer; clocktimer++;}, 1000);	  
+	window.onunload = function() {    		
 		window.clearInterval(clock);
 		clocktimer = 0;
 	}

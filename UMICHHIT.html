@@ -70,8 +70,7 @@ function populateAssignmentID(field_id,doc_id) {
 
   <body onload="populateAssignmentID('myAssignmentId','doc_id')"> 
   <div class="container">
-	<h4><em><font color="red">Please note that this HIT is periodically repeated. Broken Links have been fixed. Do not respond if you have previously done so.</font></em></h4> 
-    <h3>Kindly answer the following questions about the document shown</h3> 
+	 <h3>Kindly answer the following questions about the document shown</h3> 
 	<a href="#" target="_blank" id="doc_id">Click here to download syllabus</a><br><br>
     <form id="mturk_form" method="post" action="http://josdwell.com/umichSubmit.php" >
 	<fieldset>
@@ -138,7 +137,7 @@ function populateAssignmentID(field_id,doc_id) {
 
 	<div class="form-group">
 	   <label>6. How many study hours per week are recommended?</label><br>
-		<input type="number" name="q6" placeholder="0" id="recommendedHrs" class="col-xs-4" min="0">
+		<input type="number" name="q6" placeholder="0" id="recommendedHrs" class="col-xs-4" min="0" required>
 		<br>
 		<br>
 		<input type="checkbox" name="q6" value="Unclear" id="recommendedUnclr">&nbsp I don't know<br>	
@@ -289,7 +288,7 @@ function populateAssignmentID(field_id,doc_id) {
 
 <div class="form-group">
    <label for="q25">25. If this document has multiple "titles" or "sections", please list the titles one per line, ending each line with a semicolon(;). </label><button type="button" class="btn btn-link" id="myBtn">See example</button><br>
-    <textarea name="q25" placeholder="e.g. Introduction to Linear Algebra" rows=8 cols=50 class="form-control"></textarea><br>
+    <textarea name="q25" placeholder="e.g. Introduction to Linear Algebra" rows=8 cols=50 class="form-control" required></textarea><br>
 </div>
 
 
